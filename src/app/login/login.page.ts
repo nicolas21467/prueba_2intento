@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ToastController } from '@ionic/angular';
-import{Router, router}from '@angular/router';
-import { totalmem } from 'os';
+import{Router,}from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -58,8 +58,39 @@ export class LoginPage implements OnInit {
       duration: 3000,
       color:'primary'
 
+      });
+      toast.present();
+      return toast;
+    }
+    for (let usuarios of listado){
+      if (usuarios.username == nombre.value){
+        validar = true;
+        localStorage.lengt +1;
+        localStorage.setItem(usuarios.id,nombre.value)
+      }
+    }
+      if(validar ==false || usuario != nombre.value){
+        const toast = await this.ToastController.create({
+        message:'el usuario no es valido ',
+        duration: 3000,
+        color:'primary'
+
+      });
+      toast.present();
+      return toast;
+    }
+    else{
+    const toast = await this.ToastController.create({
+      message:'el usuario no es valido ',
+      duration: 3000,
+      color:'primary'
+
     });
     toast.present();
+    nombre.value="";
+    password.value="";
+    this.router.navigateByUrl('/usuario')
     return toast;
+    }
   }
 }
