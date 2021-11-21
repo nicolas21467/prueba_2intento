@@ -20,7 +20,6 @@ export class ComentariosPage implements OnInit {
     this.listado = this.api.listado;
   }
   salir(){
-    localStorage.clear();
     this.router.navigateByUrl('/usuario')
   }
 
