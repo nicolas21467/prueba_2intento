@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../api.service';
-
+import{ Router} from '@angular/router';
 
 @Component({
   selector: 'app-comentarios',
@@ -10,7 +10,7 @@ import {ApiService} from '../api.service';
 export class ComentariosPage implements OnInit {
  listado =[];
  datos:any;
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -18,6 +18,10 @@ export class ComentariosPage implements OnInit {
     this.datos = localStorage.getItem("1")
     this.api.getPost(this.datos);
     this.listado = this.api.listado;
+  }
+  salir(){
+    localStorage.clear();
+    this.router.navigateByUrl('/usuario')
   }
 
 }
