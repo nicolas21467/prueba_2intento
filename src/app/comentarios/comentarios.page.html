@@ -10,7 +10,7 @@
   <ion-label class="ion-text-center">comentarios</ion-label>
   <div *ngIf = "listado.length > 0">
     <ion-list>
-      <div *ngFor="let i of listado "[routerLink]="['../comentario/', i.id]">
+      <div *ngFor="let i of listado "[RouterLink]="['../comentario/', i.id]">
         <ion-item>
           <ion-label>
             <h2>{{i.id}}</h2>
