@@ -20,7 +20,8 @@ export class ComentarioPage implements OnInit {
   }
   async leer(){
     await this.api.getComment(this.idPersona);
-    this.datos = this.api.datos;
+    this.datos = this.api.listado;
     console.log("metodo leer" + this.datos)
+    console.log(this.idPersona);
   }
 }
