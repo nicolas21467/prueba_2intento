@@ -7,7 +7,21 @@
 </ion-header>
 
 <ion-content>
-  <ion-title>comentarios</ion-title>
+  <ion-title class="ion-text-center">comentarios</ion-title>
+  <div *ngif = "listado.length >0">
+    <i-list>
+      <div *ngFor="let i of listado "[routerlink]="['../comentario/,i.id']">
+        <ion-item>
+          <ion-label>
+            <h2>{{i.id}}</h2>
+            <h2>{{i.title}}</h2>
+            <h2>{{i.body}}</h2>
+          </ion-label>
+        </ion-item>
+      </div>
+    </i-list>
+  </div>
+
 
 
 </ion-content>
