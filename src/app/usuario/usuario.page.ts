@@ -16,4 +16,7 @@ export class UsuarioPage implements OnInit {
     localStorage.clear();
     this.router.navigateByUrl('/login')
   }
+  comentario(){
+    this.router.navigateByUrl('/comentarios')
+  }
 }

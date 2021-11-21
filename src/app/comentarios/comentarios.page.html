@@ -1,11 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>comentarios</ion-title>
+    <ion-buttons slot="start">
+    <ion-back-button defaultHref="usuario"></ion-back-button>
+</ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-title>comentarios</ion-title>
-    
+
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="listar()">
+      <ion-icon slot="icon-only" name="list-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

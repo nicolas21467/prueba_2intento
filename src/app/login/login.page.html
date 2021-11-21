@@ -16,11 +16,13 @@
         <ion-label position="floating">contraseña</ion-label>        
         <ion-input type="Password"  #password></ion-input>
       </ion-item>
-      <ion-item>
-      <ion-button (click)="verificar(nombre,password)" expand="block"shape="round">
-        iniciar sesion
-      </ion-button>
-      </ion-item>
+      <div id="boton">
+        <ion-item>
+          <ion-button (click)="verificar(nombre,password)" expand="block"shape="round">
+            iniciar sesion
+          </ion-button>
+        </ion-item>
+      </div>
 
       </ion-card-content>
     </ion-card>
