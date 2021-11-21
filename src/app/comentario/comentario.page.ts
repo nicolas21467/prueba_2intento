@@ -8,15 +8,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./comentario.page.scss'],
 })
 export class ComentarioPage implements OnInit {
-  datos:any
+  datos:any;
   idPersona:string;
   constructor(private api : ApiService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(async p => {
-      this.idPersona = p.get('id');
-      this.leer();
+      this.idPersona = p.get('id');    
     })
+    this.leer();
   }
   async leer(){
     await this.api.getComment(this.idPersona);
