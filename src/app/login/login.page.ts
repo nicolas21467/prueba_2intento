@@ -66,7 +66,7 @@ export class LoginPage implements OnInit {
       if (usuarios.username == nombre.value){
         validar = true;
         localStorage.lengt +1;
-        localStorage.setItem(usuarios.id,nombre.value)
+        localStorage.setItem("1",usuarios.id)
       }
     }
       if(validar ==false || usuario != nombre.value){
