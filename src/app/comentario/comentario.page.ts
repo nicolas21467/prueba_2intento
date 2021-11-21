@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./comentario.page.scss'],
 })
 export class ComentarioPage implements OnInit {
-  datos:any;
+  datos=[];
   idPersona:string;
   constructor(private api : ApiService, private activatedRoute:ActivatedRoute) { }
 
