@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./usuario/usuario.module').then( m => m.UsuarioPageModule)
   },
   {
-    path: 'comentario',
+    path: 'comentario/:id',
     loadChildren: () => import('./comentario/comentario.module').then( m => m.ComentarioPageModule)
   },
   {
