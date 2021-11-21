@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{ ApiService} from './api.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-comentario',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comentario.page.scss'],
 })
 export class ComentarioPage implements OnInit {
-
-  constructor() { }
+  datos:any
+  idPersona:string;
+  constructor(private api : ApiService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(async p => {
+      this.idPersona = p.get('id');
+      this.leer();
+    })
   }
-
+  async leer(){
+    await this.api.getComment(this.idPersona);
+    this.datos = this.api.datos;
+    console.log("metodo leer" + this.datos)
+  }
 }

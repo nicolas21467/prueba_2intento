@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from './api.service';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-comentarios',
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class ComentariosPage implements OnInit {
  listado =[];
  datos:any;
-  constructor(private api:ApiService, private router:Router) { }
+  constructor(private api:ApiService) { }
 
   ngOnInit() {
   }
