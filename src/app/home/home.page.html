@@ -5,16 +5,20 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
+  <ion-card id ="card">
     <ion-card-content class="ion-text-center">
       <div class="ion-content-center">
         menu
-        <ion-button href="registrarse"expand="block"  shape="round">
-          registrarse
-        </ion-button>
-        <ion-button href="login" expand="block" shape="round">
-          iniciar sesion
-        </ion-button>
+        <div id="boton1">
+          <ion-button href="registrarse"expand="block"  shape="round">
+            registrarse
+          </ion-button>
+        </div>
+        <div id="boton2">
+          <ion-button  href="login" expand="block" shape="round">
+            iniciar sesion
+          </ion-button>
+        </div>
       </div>
     </ion-card-content>
   </ion-card>
