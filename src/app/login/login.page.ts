@@ -42,6 +42,7 @@ export class LoginPage implements OnInit {
     toast.present();
     return toast;
   }
+
   else if(clave.trim().length == 0){
     const toast = await this.ToastController.create({
       message:'porfavor rellene la contraseña con una valida',
@@ -81,7 +82,7 @@ export class LoginPage implements OnInit {
     }
     else{
     const toast = await this.ToastController.create({
-      message:'el usuario no es valido ',
+      message:'redireccionando....',
       duration: 3000,
       color:'primary'
 

@@ -3,6 +3,27 @@
     <ion-title>login</ion-title>
   </ion-toolbar>
 </ion-header>
+    <ion-card>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>iniciar sesion</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">usuario</ion-label>        
+          <ion-input type="text"  #nombre></ion-input>
+        </ion-item>
+        <ion-item>
+        <ion-label position="floating">contraseña</ion-label>        
+        <ion-input type="password"  #password></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-button (click)="verificar(nombre,password)" expand="block"shape="round">
+        iniciar sesion
+      </ion-button>
+      </ion-item>
+
+      </ion-card-content>
+    </ion-card>
 
 <ion-content>
 
