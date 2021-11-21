@@ -1,0 +1,7 @@
+{
+  "name": "prueba_2intento",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
